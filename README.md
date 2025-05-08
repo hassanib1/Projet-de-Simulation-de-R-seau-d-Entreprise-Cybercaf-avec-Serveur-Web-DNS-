@@ -1,0 +1,2 @@
+# Projet-de-Simulation-de-R-seau-d-Entreprise-Cybercaf-avec-Serveur-Web-DNS-
+Ce projet consiste à configurer et simuler un réseau d'entreprise (type cybercafé). Le réseau inclut des équipements tels que des PC clients, des smartphones, des routeurs, des switches et des serveurs (Web, DNS). Le but est de permettre aux utilisateurs d'accéder à des services réseau tels que la navigation web, la résolution de noms de domaine.
