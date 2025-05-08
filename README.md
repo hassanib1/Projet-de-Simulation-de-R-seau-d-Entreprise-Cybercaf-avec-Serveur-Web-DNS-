@@ -1,43 +1,52 @@
-Objectifs
+# 🌐 TP : Configuration d'un réseau d'entreprise avec accès Internet et services web
 
-Mettre en place un réseau local pour le cybercafé.
-Configurer un routeur principal (CAFE) pour distribuer les adresses IP via DHCP.
-Connecter le réseau local au réseau FAI simulant l'accès à Internet.
-Configurer un serveur DNS et un serveur Web pour les clients.
-Appliquer des ACL pour sécuriser le réseau.
+## 📑 Présentation
 
-Topologie du Réseau
-![apercus du contenu](cybercafe.pkt)
+Dans ce TP, nous avons réalisé la configuration complète d'un réseau d'entreprise pour un cybercafé. L'objectif était de permettre aux postes clients, aux smartphones et aux ordinateurs portables d'accéder à Internet via un routeur FAI. Nous avons également simulé un serveur web et la resolution des noms de domaines.
 
+---
 
-Configuration des Équipements
+## 🛠️ Architecture Réseau
 
-1. Routeur FAI
-
-Configuration NAT pour permettre l'accès à Internet.
-Attribuer une IP publique (par exemple : 20.20.20.2).
-
-2. Routeur d'accès
-
-DHCP activé pour la distribution d'adresses IP aux clients.
-Configuration des interfaces LAN/WLAN avec des sous-réseaux spécifiques.
-
-3. Serveur Web
-
-Adresse IP statique : 192.168.1.2
-Configuration du service HTTP (activé)
-Création d'une page d'accueil par défaut (index.html)
-
-4. Serveur DNS
-
-Adresse IP statique : 192.168.1.2
-Configuration des entrées DNS pour les domaines utilisés (par exemple : www.google.com).
-
-5.Tests de Communication
-Vérifier l'accès web en tapant l'IP du serveur (http://20.20.20.2) et le nom de domaine (http://www.google.com).
-
-6.Tester la résolution DNS avec la commande :
-nslookup www.google.com
+![apercus du contenu](cybercafe.png)
 
 
+## 🌐 Configuration des Services
 
+### 🌍 Serveur Web
+- Service HTTP activé sur le serveur (IP : 20.20.20.2).
+- Création de pages HTML pour simuler l'accès à un site web (ex : `index.html`).
+- Accès via l'URL : `http://20.20.20.2` ou `http://www.google.com` (via DNS).
+
+## 🖧 Configuration du NAT
+
+Pour permettre l'accès Internet aux postes clients, nous avons configuré le NAT sur le routeur FAI :
+
+- **Source NAT (SNAT)** : Traduction des adresses IP privées en IP publique.
+- **PAT (Port Address Translation)** pour la gestion des connexions multiples.
+
+---
+
+## 🚨 Problèmes rencontrés
+
+- Attribution d'IP incorrecte via DHCP après redémarrage (169.254.x.x).
+- Problème de communication entre les sous-réseaux.
+- Erreur de résolution DNS lors de l'accès à un site par nom de domaine.
+
+---
+
+## ✅ Solutions apportées
+
+- Redémarrage du service DHCP pour réattribuer les bonnes IP.
+- Vérification des routes sur le routeur FAI.
+- Configuration correcte du serveur DNS pour la résolution de noms.
+
+---
+
+## 📝 Conclusion
+
+Ce projet nous a permis de maîtriser la configuration d'un réseau d'entreprise avec accès Internet et services web. La gestion des services réseau (HTTP, DNS,) et la mise en place du NAT sont essentielles pour assurer la connectivité et l'accessibilité des ressources internes et externes.
+
+## AUTEUR 
+HASSAN IBRAHIM
+ibhassan279@gmail.com
