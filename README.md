@@ -8,7 +8,7 @@ Dans ce TP, nous avons réalisé la configuration complète d'un réseau d'entre
 
 ## 🛠️ Architecture Réseau
 
-![apercus du contenu](cybercafe.png)
+![apercus du contenu](cybercafe.jpg)
 
 
 ## 🌐 Configuration des Services
